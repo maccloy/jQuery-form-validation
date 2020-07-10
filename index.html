@@ -4,22 +4,30 @@
     <title>jQuery form validation</title>
     <meta charset="UTF-8">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+    <link rel="stylesheet" href="styles.css">
 </head>
 <body>
 <h1>jQuery form validation</h1>
 <form method="post" action="submit.php">
     
-    Name
-    <input type="text" name="name"><br>
-
-    Email
-    <input type="email" name="email"><br>
-
-    Age
-    <input type="text" name="age"><br>
-
-    <input type="submit">
-    <input type="reset">
+    <div class="form-group">
+        <label for="name">Name</label>
+        <input type="text" class="form-control" id="name">
+    </div>
+    
+    <div class="form-group">
+        <label for="email">Email</label>
+        <input type="email" class="form-control" id="email" aria-describedby="emailHelp">
+        <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small>
+    </div>
+    
+    <div class="form-group">
+        <label for="age">Age</label>
+        <input type="text" class="form-control" id="age">
+    </div>
+    
+    <input type="button" value="Submit" class="btn btn-primary">
+    <input type="reset" class="btn btn-danger">
 
 </form>
 
